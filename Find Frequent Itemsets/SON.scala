@@ -44,7 +44,7 @@ object SON{
     for (i<-size_item.keys.toList.sorted){
       res=res+sort(size_item(i).toList).map(x=>"('"+x.mkString("','")+"')").mkString(",")+"\n\n"
     }
-    val filename="Yibo_Ma_SON_"+args(1).substring(args(1).lastIndexOf("/")+1,args(1).length-4)+
+    val filename="SON_"+args(1).substring(args(1).lastIndexOf("/")+1,args(1).length-4)+
       ".case"+args(0)+"-"+args(2)+".txt"
     new PrintWriter(filename) { write(res.trim); close }
 
